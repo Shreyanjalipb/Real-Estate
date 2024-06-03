@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    /* Styles for the pop-up form */
+    .popup-form {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+        width: 300px;
+    }
+
+    /* Styles for form fields and buttons */
+    .popup-form input,
+    .popup-form button {
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        border-radius: 25px;
+    }
+
+    .popup-form button {
+        background-color: #ff0073;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: red;
+}
+
+.close-btn:hover {
+    color: darkred;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Dream House Listings</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listing.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header> 
+
+    <section class="list">
+        <div class="card">
+            <div class="image-slider">
+                <div class="slides">
+                    <img src="Images/img1.jpeg" alt="House 1">
+                    <img src="Images/img2.jpeg" alt="House 2">
+                    <img src="Images/img3.jpeg" alt="House 3">
+                </div>
+                <div class="overlay">
+                    <div class="top-section">
+                        <span>RENT</span>
+                        <i class="fas fa-heart heart-icon"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="details">
+                <h2>Greenwood Estates</h2>
+                <p>$500,000</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="#" id="purchase-btn"><button>Purchase</button></a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-slider">
+                <div class="slides">
+                    <img src="Images/img4.jpeg" alt="House 2">
+                </div>
+                <div class="overlay">
+                    <div class="top-section">
+                        <span>RENT</span>
+                        <i class="fas fa-heart heart-icon"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="details">
+                <h2>Maplewood Heights</h2>
+                <p>$750,000</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="#" id="purchase-btn"><button>Purchase</button></a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-slider">
+                <div class="slides">
+                    <img src="Images/img8.jpeg" alt="House 3">
+                </div>
+                <div class="overlay">
+                    <div class="top-section">
+                        <span>RENT</span>
+                        <i class="fas fa-heart heart-icon"></i>
+                    </div>
+            
+                </div>
+            </div>
+            <div class="details">
+                <h2>Sunset Ridge</h2>
+                <p>$1,000,000</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="#" id="purchase-btn"><button>Purchase</button></a>
+            </div>
+        </div>
+    </section>
+    <section class="list">
+        <div class="card">
+            <div class="image-slider">
+                <div class="slides">
+                    <img src="Images/img18.jpg" alt="House 1">
+                </div>
+                <div class="overlay">
+                    <div class="top-section">
+                        <span>RENT</span>
+                        <i class="fas fa-heart heart-icon"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="details">
+                <h2>Greenwood Estates</h2>
+                <p>$500,000</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="#" id="purchase-btn"><button>Purchase</button></a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-slider">
+                <div class="slides">
+                    <img src="Images/img17.jpg" alt="House 2">
+                </div>
+                <div class="overlay">
+                    <div class="top-section">
+                        <span>RENT</span>
+                        <i class="fas fa-heart heart-icon"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="details">
+                <h2>Maplewood Heights</h2>
+                <p>$750,000</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="#" id="purchase-btn"><button>Purchase</button></a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-slider">
+                <div class="slides">
+                    <img src="Images/img16.jpg" alt="House 3">
+                </div>
+                <div class="overlay">
+                    <div class="top-section">
+                        <span>RENT</span>
+                        <i class="fas fa-heart heart-icon"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="details">
+                <h2>Sunset Ridge</h2>
+                <p>$1,000,000</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="#" id="purchase-btn"><button>Purchase</button></a>
+            </div>
+        </div>
+    </section>
+    
+<!-- Pop-up form -->
+<div class="popup-form" id="purchase-form">
+    <span class="close-btn" onclick="closeForm()">&times;</span>
+    <form>
+        <h1>Payment Section</h1>
+        <hr>
+        <input type="text" placeholder="Name" required>
+        <input type="number" placeholder="Age" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="text" placeholder="Aadhar Card No" required>
+        <input type="text" id="total-price" placeholder="Total Price" required readonly>
+        <button type="submit">Proceed to Payment</button>
+    </form>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const purchaseBtn = document.getElementById('purchase-btn');
+        const purchaseForm = document.getElementById('purchase-form');
+        const totalPriceInput = document.getElementById('total-price');
+
+        purchaseBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            purchaseForm.style.display = 'block';
+            totalPriceInput.value = '$500,000'; // Set the total price dynamically
+        });
+
+        // Close the form when clicking outside or pressing Esc key
+        window.addEventListener('click', function (e) {
+            if (e.target === purchaseForm) {
+                purchaseForm.style.display = 'none';
+            }
+        });
+
+        window.addEventListener('keyup', function (e) {
+            if (e.key === 'Escape') {
+                purchaseForm.style.display = 'none';
+            }
+        });
+    });
+    function closeForm() {
+    document.getElementById('purchase-form').style.display = 'none';
+}
+
+// To open the form (you can call this function when you want to show the form)
+function openForm() {
+    document.getElementById('purchase-form').style.display = 'block';
+}
+
+// Example to show the form (You can call this on a button click or any event)
+openForm();
+document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    function showNextSlide() {
+        slides[currentIndex].style.opacity = 0;
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].style.opacity = 1;
+    }
+
+    setInterval(showNextSlide, 3000); // Change slide every 3 seconds
+});
+
+</script>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

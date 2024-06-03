@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <h1>Dream House Listings</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#House">Categories</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header> 
+      <div class="container">
+        <div class="slide">      
+            <div class="item" style="background-image: url(Images/img11.jpg);">
+                <div class="content">
+                    <div class="name">Greenwood Estates</div>
+                    <div class="des">A serene residential area known for its lush green parks and modern amenities, ideal for family living.</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Images/img17.jpg);">
+                <div class="content">
+                    <div class="name">Sunset Ridge</div>
+                    <div class="des">A vibrant community featuring beautiful sunsets, diverse dining options, and a lively arts scene.</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Images/img12.jpg);">
+                <div class="content">
+                    <div class="name">Iceland</div>
+                    <div class="des">A picturesque area along the riverbank with walking trails, cozy cafes, and a peaceful atmosphere.
+                    </div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Images/img13.jpg);">
+                <div class="content">
+                    <div class="name">Hilltop Haven</div>
+                    <div class="des">A sought-after community perched on a hill, offering panoramic views and a sense of privacy.</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Images/img15.jpg);">
+                <div class="content">
+                    <div class="name">Netherland</div>
+                    <div class="des">A tranquil enclave with spacious homes, tree-lined streets, and excellent recreational facilities.</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Images/img14.jpg);">
+                <div class="content">
+                    <div class="name">Willow Springs</div>
+                    <div class="des">A peaceful residential area with winding streets, beautiful gardens, and a strong sense of community.</div>
+                    <button>See More</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+    </div>
+    <main>
+        <h2>Categories Of Houses</h2>
+        <section class="property-list" id="House">
+            <div class="property-card">
+                <img src="Images/img1.jpeg" alt="House 1">
+                <div class="property-details">
+                    <h2>RENT</h2>
+                    <p>$500,000</p>
+                    <a href="D1.html"><button>Details</button></a>
+                </div>
+            </div>
+            <div class="property-card">
+                <img src="Images/img4.jpeg" alt="House 2">
+                <div class="property-details">
+                    <h2>SELL</h2>
+                    <p>$750,000</p>
+                    <a href="Details.html"><button>Details</button></a>
+                </div>
+            </div>
+            <div class="property-card">
+                <img src="Images/img8.jpeg" alt="House 3">
+                <div class="property-details">
+                    <h2>LEASE</h2>
+                    <p>$1,000,000</p>
+                    <a href="D2.html"><button>Details</button></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="about-us-section" id="about">
+        <div class="about-us-content">
+            <div class="about-us-images">
+                <div class="card1">
+                    <div class="slider">
+                        <div class="slide">
+                            <img src="Images/img20.jpg" alt="Real Estate Image 1">
+                        </div>
+                        <div class="slide">
+                            <img src="Images/img24.jpg" alt="Real Estate Image 2">
+                        </div>
+                        <div class="slide">
+                            <img src="Images/img22.jpg" alt="Real Estate Image 3">
+                        </div>
+                        <div class="slide">
+                            <img src="Images/img21.jpg" alt="Real Estate Image 3">
+                        </div>
+                        <div class="slide">
+                            <img src="Images/img23.jpg" alt="Real Estate Image 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-us-info">
+                <h2 class="pop-animation">About Us</h2>
+                <p id="typed-text"></p>
+            </div>
+        </div>
+    </div>
+    <div class="contact-us-section" id="contact">
+        <div class="contact-us-content">
+            <div class="contact-us-info">
+                <h2>Contact Us</h2>
+                <p>Email: company@gmail.com</p>
+                <p>Phone: 87654372145</p>
+            </div>
+            <div class="contact-us-form">
+                <form id="contact-form">
+                    <h2>Get in Touch</h2>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Real Estate Website. All rights reserved.</p>
+    </footer>
+ 
+    <script src="scripts.js"></script>
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+ 
+    
+ 
